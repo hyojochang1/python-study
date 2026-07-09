@@ -41,7 +41,7 @@ target_number = (random.randint(1,200))
 
 while True:
 
-    guess = int(input("Guess:"))
+    guess = int(input("Guess: "))
 
     if guess == target_number:
         print("You have gotten the number!")
@@ -52,20 +52,27 @@ while True:
     else:
         print("Your guess is higher than the number")
 
-#print("This is a game of rock paper scissor!")
-#print("On go, enter your move")
-#movelist = ["scissor","paper","rock"]
-#for i in (range(3,0,-1)):
- #   print (i)
-  #  time.sleep(1)
+print("This is a game of rock paper scissor!")
+print("On go, enter your move")
+movelist = ["scissor","paper","rock"]
+for i in (range(3,0,-1)):
+    print (i)
+    time.sleep(1)
 
-#print ("Go!")
-#move = input("")
-#robot_move = movelist[random.randint(0,2)] 
-#print (f"Robot: {robot_move} Player: {move}")
+print ("Go!")
+move = input("")
+robot_move = movelist[random.randint(0,2)] 
+print (f"Robot: {robot_move}\nPlayer: {move}")
 
-#if move == robot_move:
-#    print("Tie!")
-#elif move == "scissor" and robot_move == "rock" or 
-#    print ("you lose!")
+if move == robot_move:
+    print("Tie!")
+elif move == 'scissor' and robot_move == 'rock':
+    print ("rock beats scissor, you lose!")
+elif move == 'rock' and robot_move == 'paper':
+    print ("paper beats rock, you lose!")
+elif move == 'paper' and robot_move == 'scissor':
+    print("scissor beats paper, you lose!")
+else:
+    print ("You have won!")
+
 
